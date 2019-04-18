@@ -1,0 +1,140 @@
+﻿
+@{
+    ViewBag.Title = "Changting";
+}
+<div id="biaoge">
+@*<div name="zuowei" class="oo">
+  
+</div>
+<div name="zuowei" class="oo">
+
+</div>*@
+    </div>
+<div id="anniu">
+  行数:<input type="text" id="hang"/><br/>
+    <br />
+    <br />
+    列数:<input type="text" id="lie" /><br />
+    <br />
+    <br />
+    <input type="button" class="btn-block"
+           onclick="tjzw()" value="确定提交" id="bu" />
+    <input type="button" class="btn-block"
+           onclick="Kjxz()" value="快捷选座" id="bu" />
+    <input type="button" class="btn-block"
+           onclick="dj()" value="diaji" id="bu" />
+</div>
+<script src="~/scripts/jquery-1.10.2.js"></script>
+@section scripts{
+<style>
+    .oo{
+        width: 50px;
+        height: 50px;
+       border: 3px solid #dbd6d6;
+    }
+    #anniu {
+        float:left;
+        margin-left:2%;
+    }
+    #biaoge {
+    width:80%;
+   
+    float:left;
+    border:1px solid #dbd6d6;
+    
+    }
+    body {
+    background-color:white;
+    }
+</style>
+<script>
+
+    function Kjxz() {
+        $("[class='oo']").bind("mouseenter", function () {
+            var jj = $(this).index();
+            $("[class='oo']:eq(" + jj + ")").attr("name", "bianse");
+                $("[class='oo']:eq(" + jj + ")").css("background-color", "red");
+        })
+        
+    }
+
+    function dj() {
+        $("[class='oo']").css("background-color");
+        var sz = [];
+        sz = $("div[name='bianse']").each(function () {
+            alert($(this).attr("id"))
+        });
+     
+        //for (var i = 0; i < sz.length; i++) {
+        //    alert(sz[i])
+        //}
+    }
+
+    function tjzw() {
+      
+        var hang = $("#hang").val();
+        var lie = $("#lie").val();
+      
+        var cishu =(parseInt($("#hang").val()) + 1) * parseInt(lie);
+        var qumo = parseInt($("#hang").val()) + 1;
+        $("#biaoge").empty();
+        //alert(hang + "," + lie + "," + cishu + "," + qumo)
+        for (var i = 1; i <= cishu ; i++) {
+            
+            if (i % qumo  == 0) {
+                
+                $("#biaoge").append('<div name="zuowei" class="oo" id="' + i + '" ></div>')
+                
+            } else {
+                $("#biaoge").append('<div name="zuowei" class="oo" id="' + i + '" style="float:left"></div>')
+            }
+          
+        }
+        $("[class='oo']").on("click", function () {
+            $("[class='oo']").unbind('mouseenter').unbind("mouseleave");
+            var jj = $(this).index();
+            var red = $("[class='oo']:eq(" + jj + ")").css("background-color");
+ 
+            if (red == "rgba(0, 0, 0, 0)" || red == "rgb(255, 255, 255)") {
+                $("[class='oo']:eq(" + jj + ")").attr("name", "bianse");
+                $("[class='oo']:eq(" + jj + ")").css("background-color", "red");
+            } else {
+                $("[class='oo']:eq(" + jj + ")").attr("name", "bubian");
+                $("[class='oo']:eq(" + jj + ")").css("background-color", "white");
+            }
+
+        })
+
+       
+    }
+
+
+    //$("[name=zuowei]").on("click", function () {
+       
+    //    var jj = $(this).index();
+    //    var red = $("[name=zuowei]:eq(" + jj + ")").css("background-color");
+    //    alert(red)
+    //    if (red == "rgba(0, 0, 0, 0)") {
+
+    //        $("[name=zuowei]:eq(" + jj + ")").css("background-color", "red");
+    //    } else {
+    //        $("[name=zuowei]:eq(" + jj + ")").css("background-color", "white");
+    //    }
+       
+    //})
+
+    
+
+    //$("[name=zuowei]").click(function () {
+    //    var jj = $(this).index();
+    //    var red = $("[name=zuowei]:eq(" + jj + ")").css("background-color");
+    //    alert(red)
+    //    if (red == "rgba(0, 0, 0, 0)") {
+
+    //        $("[name=zuowei]:eq(" + jj + ")").css("background-color", "red");
+    //    }else{
+    //        $("[name=zuowei]:eq(" + jj + ")").css("background-color", "white");
+    //    }
+    //});
+</script>
+    }

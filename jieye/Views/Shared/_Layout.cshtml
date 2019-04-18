@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="~/vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="~/css/styles.css">
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <style>
+        body {
+            margin-top:-3.2%;
+        }
+       
+    </style>
+</head>
+<body class="sidebar-fixed header-fixed">
+        <div class="page-wrapper">
+            <nav class="navbar page-header">
+                <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+                <a class="navbar-brand" href="#">
+                    <img src="~/imgs/logo.png" alt="logo">
+                </a>
+
+                <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item d-md-down-none">
+                        <a href="#">
+                            <i class="fa fa-bell"></i>
+                            <span class="badge badge-pill badge-danger">5</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item d-md-down-none">
+                        <a href="#">
+                            <i class="fa fa-envelope-open"></i>
+                            <span class="badge badge-pill badge-danger">5</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="~/imgs/avatar-1.png" class="avatar avatar-sm" alt="logo">
+                            <span class="small ml-1 d-md-down-none">John Smith</span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header">Account</div>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa fa-user"></i> Profile
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa fa-envelope"></i> Messages
+                            </a>
+
+                            <div class="dropdown-header">Settings</div>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa fa-bell"></i> Notifications
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa fa-wrench"></i> Settings
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa fa-lock"></i> Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="main-container">
+                <div class="sidebar">
+                    <nav class="sidebar-nav">
+                        <ul class="nav">
+                            <li class="nav-title">商户管理/li>
+
+                            <li class="nav-item">
+                                <a href="Index" class="nav-link active">
+                                    <i class="icon icon-speedometer"></i> 首页
+                                </a>
+                            </li>
+
+                            <li class="nav-item nav-dropdown">
+                                <a href="#" class="nav-link nav-dropdown-toggle">
+                                    <i class="icon icon-target"></i> 账号设置 <i class="fa fa-caret-left"></i>
+                                </a>
+
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a href="Shouye" class="nav-link">
+                                            <i class="icon icon-target"></i> 修改密码
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+
+                            <li class="nav-item nav-dropdown">
+                                <a href="#" class="nav-link nav-dropdown-toggle">
+                                    <i class="icon icon-energy"></i> 我的影城 <i class="fa fa-caret-left"></i>
+                                </a>
+
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a href="alerts.html" class="nav-link">
+                                            <i class="icon icon-energy"></i> 信息修改
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="buttons.html" class="nav-link">
+                                            <i class="icon icon-energy"></i> 上映影厅
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="cards.html" class="nav-link">
+                                            <i class="icon icon-energy"></i> 上映电影
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="nav-item nav-dropdown">
+                                <a href="#" class="nav-link nav-dropdown-toggle">
+                                    <i class="icon icon-graph"></i> 聊天信息 <i class="fa fa-caret-left"></i>
+                                </a>
+
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a href="chartjs.html" class="nav-link">
+                                            <i class="icon icon-graph"></i> 聊天管理
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item nav-dropdown">
+                                <a href="forms.html" class="nav-link nav-dropdown-toggle">
+                                    <i class="icon icon-graph"></i> 优惠卷 <i class="fa fa-caret-left"></i>
+                                </a>
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a href="chartjs.html" class="nav-link">
+                                            <i class="icon icon-graph"></i> 发布优惠卷
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="chartjs.html" class="nav-link">
+                                            <i class="icon icon-graph"></i> 所有优惠卷
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                            <li class="nav-item nav-dropdown">
+                                <a href="forms.html" class="nav-link nav-dropdown-toggle">
+                                    <i class="icon icon-graph"></i> 购票详情 <i class="fa fa-caret-left"></i>
+                                </a>
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a href="chartjs.html" class="nav-link">
+                                            <i class="icon icon-graph"></i> 预定详情
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="chartjs.html" class="nav-link">
+                                            <i class="icon icon-graph"></i> 购买详情
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-title">More</li>
+
+                            <li class="nav-item nav-dropdown">
+                                <a href="#" class="nav-link nav-dropdown-toggle">
+                                    <i class="icon icon-umbrella"></i> 退出 <i class="fa fa-caret-left"></i>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </nav>
+                  
+                    </div>
+               
+                </div>
+                    
+
+                </div>
+    <div class="content" style="margin-top:-44%">
+        @RenderBody()
+
+    </div>
+                       
+           
+        <script src="~/vendor/jquery/jquery.min.js"></script>
+        <script src="~/vendor/popper.js/popper.min.js"></script>
+        <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="~/vendor/chart.js/chart.min.js"></script>
+        <script src="~/js/carbon.js"></script>
+        <script src="~/js/demo.js"></script>
+  
+
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @RenderSection("scripts",required:false)
+</body>
+</html>

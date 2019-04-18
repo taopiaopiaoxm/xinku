@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style>
+        .gudingdb {
+            width:100%;
+        position:fixed;
+        bottom:0%;
+        background-color:white;
+        opacity:0.95;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        @RenderBody()
+        <div class="gudingdb">
+            <div class="layui-row">
+                <div class="layui-col-xs4" @*style="background-color:#fa4d4d;"*@>
+                    <div style="text-align:center;">
+                  <img src="~/imgs/xtp/genx/dianyingyuan.png" style="width:30px;height:30px;" /><br/>
+                    
+                    <label style="color:#fa4d4d;"><strong>热映</strong></label>
+                        </div>
+                </div>
+                <div class="layui-col-xs4">
+                    <div style="text-align:center;">
+                        <img src="~/imgs/xtp/yingyuana.png" style="width:30px;height:30px;" /><br />
+
+                        <label>影院</label>
+                        </div>
+                    </div>
+                <div class="layui-col-xs4">
+                    <div style="text-align:center;">
+                        <img src="~/imgs/xtp/wode.png" style="width:30px;height:30px;" /><br />
+
+                        <label>我的</label>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/scripts/jquery-1.10.2.js"></script>
+    <script src="~/scripts/bootstrap.js"></script>
+    @RenderSection("scripts",required:false)
+</body>
+</html>
